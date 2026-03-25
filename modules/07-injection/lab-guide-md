@@ -1,0 +1,6 @@
+# Guía del Laboratorio – SQL Injection
+
+## 1. Preparación
+```bash
+cd modules/07-injection
+docker compose up -d
