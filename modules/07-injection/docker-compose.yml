@@ -1,0 +1,12 @@
+services:
+  vulnerable-injection:
+    build: ./vulnerable
+    ports:
+      - "5001:5000"   # Puerto diferente para no chocar con otros labs
+    container_name: vulnerable-injection
+
+  secure-injection:
+    build: ./secure
+    ports:
+      - "5002:5000"
+    container_name: secure-injection
