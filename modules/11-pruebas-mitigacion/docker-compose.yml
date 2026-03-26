@@ -1,0 +1,5 @@
+services:
+  # Este módulo usa principalmente las aplicaciones ya definidas en el docker-compose raíz
+  testing-lab:
+    image: hello-world
+    container_name: module-11-placeholder
