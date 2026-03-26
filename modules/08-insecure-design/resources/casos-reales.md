@@ -1,10 +1,10 @@
 # Casos Reales de Insecure Design
 
-- **Equifax (2017)**: Fallo de diseño en segmentación de red + parcheo tardío.
-- **Capital One (2019)**: SSRF debido a diseño incorrecto de permisos en AWS.
-- **Twitter (2022)**: Vulnerabilidad masiva de "zero-click" por diseño deficiente de API interna.
-- **ChatGPT plugins (2023)**: Insecure Design permitió acceso no autorizado a datos de usuarios.
-- **MOVEit Transfer (2023)**: Fallo de diseño en la lógica de autenticación progresiva.
+- **Capital One (2019)**: Configuración incorrecta de WAF + diseño deficiente de permisos en AWS → exposición de 100 millones de registros.
+- **Twitter (2022)**: Vulnerabilidad masiva por diseño incorrecto de una API interna.
+- **Equifax (2017)**: Falta de segmentación de red y threat modeling inadecuado.
+- **ChatGPT Plugins (2023)**: Diseño inseguro permitió que plugins accedieran a datos de otros usuarios.
+- **MOVEit Transfer (2023)**: Lógica de autenticación progresiva mal diseñada.
 
-**Lección principal:**
-Corregir un problema de diseño en producción es mucho más caro que prevenirlo en la fase de diseño.
+**Lección principal:**  
+Corregir un problema de diseño en producción cuesta 10–100 veces más que prevenirlo durante la fase de diseño.
