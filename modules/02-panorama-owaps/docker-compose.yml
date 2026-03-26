@@ -1,0 +1,5 @@
+services:
+  # Este módulo no requiere apps adicionales, solo usa las del docker-compose raíz
+  placeholder:
+    image: hello-world
+    container_name: module-02-placeholder
