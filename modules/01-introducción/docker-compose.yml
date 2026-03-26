@@ -74,7 +74,21 @@ services:
       - "5006:5000"
     restart: unless-stopped
 
+# Módulo 05 - Vulnerable Supply Chain
+  vulnerable-supply-chain:
+    build: ./modules/05-software-supply-chain/vulnerable
+    container_name: vulnerable-supply-chain
+    ports:
+      - "5007:5000"
+    restart: unless-stopped
 
+  secure-supply-chain:
+    build: ./modules/05-software-supply-chain/secure
+    container_name: secure-supply-chain
+    ports:
+      - "5008:5000"
+    restart: unless-stopped
+      
   # Módulo 07 - Injection
   vulnerable-injection:
     build: ./modules/07-injection/vulnerable
