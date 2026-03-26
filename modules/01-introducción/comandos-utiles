@@ -1,0 +1,12 @@
+# Levantar todo
+docker compose up -d
+
+# Ver logs de un contenedor específico
+docker logs -f juice-shop
+docker logs -f crapi
+
+# Detener todo
+docker compose down
+
+# Reiniciar solo una app
+docker restart vulnerable-injection
