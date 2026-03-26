@@ -1,0 +1,12 @@
+services:
+  vulnerable-crypto:
+    build: ./vulnerable
+    container_name: vulnerable-crypto
+    ports:
+      - "5009:5000"
+
+  secure-crypto:
+    build: ./secure
+    container_name: secure-crypto
+    ports:
+      - "5010:5000"
