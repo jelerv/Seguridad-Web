@@ -1,0 +1,12 @@
+services:
+  vulnerable-auth:
+    build: ./vulnerable
+    container_name: vulnerable-auth
+    ports:
+      - "5011:5000"
+
+  secure-auth:
+    build: ./secure
+    container_name: secure-auth
+    ports:
+      - "5012:5000"
