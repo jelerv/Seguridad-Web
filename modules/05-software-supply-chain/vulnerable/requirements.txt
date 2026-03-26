@@ -1,0 +1,6 @@
+**vulnerable/requirements.txt** (con dependencias vulnerables conocidas)
+```txt
+flask==2.0.0                    # Versión antigua con vulnerabilidades conocidas
+requests==2.25.0
+django==3.2.0                   # Ejemplo de framework desactualizado
+pyjwt==1.7.1                    # Versión vulnerable a algoritmos débiles
