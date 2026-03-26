@@ -1,0 +1,5 @@
+services:
+  # Módulo final - solo usa las aplicaciones ya existentes
+  course-closure:
+    image: hello-world
+    container_name: module-12-closure
