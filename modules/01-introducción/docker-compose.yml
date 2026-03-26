@@ -59,6 +59,22 @@ services:
       - "5004:5000"
     restart: unless-stopped
 
+ # Módulo 04 - Security Misconfiguration
+  vulnerable-misconfig:
+    build: ./modules/04-security-misconfiguration/vulnerable
+    container_name: vulnerable-misconfig
+    ports:
+      - "5005:5000"
+    restart: unless-stopped
+
+  secure-misconfig:
+    build: ./modules/04-security-misconfiguration/secure
+    container_name: secure-misconfig
+    ports:
+      - "5006:5000"
+    restart: unless-stopped
+
+
   # Módulo 07 - Injection
   vulnerable-injection:
     build: ./modules/07-injection/vulnerable
