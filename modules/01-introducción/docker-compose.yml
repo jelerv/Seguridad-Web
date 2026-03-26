@@ -155,5 +155,21 @@ services:
       - "5012:5000"
     restart: unless-stopped
 
+  # Módulo 10 - A08, A09, A10:2025 + Seguridad Avanzada en APIs
+  vulnerable-api-advanced:
+    build: ./modules/10-a08-a09-a10-api-avanzado/vulnerable
+    container_name: vulnerable-api-advanced
+    ports:
+      - "5013:5000"
+    restart: unless-stopped
+
+  secure-api-advanced:
+    build: ./modules/10-a08-a09-a10-api-avanzado/secure
+    container_name: secure-api-advanced
+    ports:
+      - "5014:5000"
+    restart: unless-stopped
+
+
 volumes:
   dvwa-db-data:
