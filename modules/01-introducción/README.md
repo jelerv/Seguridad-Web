@@ -22,3 +22,12 @@ Este módulo sienta las bases para entender por qué el OWASP Top 10:2025 sigue 
 **Referencias oficiales:**
 - OWASP Top 10:2025 – Introducción oficial: https://owasp.org/Top10/2025/
 - OWASP API Security Top 10 2023
+
+## Entorno de Laboratorio
+
+El curso incluye un **docker-compose.yml** centralizado que levanta:
+
+- **Juice Shop** (Web + API moderna)
+- **CrAPI** (Completely Ridiculous API – OWASP)
+- **DVWA** (Damn Vulnerable Web Application)
+- Apps vulnerables y seguras de cada módulo (Injection, Broken Access Control, etc.)
