@@ -125,5 +125,20 @@ services:
   #   ports:
   #     - "5003:5000"
 
+  # Módulo 08 - Identification Auth Failures
+  vulnerable-auth:
+    build: ./modules/09-identification-auth-failures/vulnerable
+    container_name: vulnerable-auth
+    ports:
+      - "5011:5000"
+    restart: unless-stopped
+
+  secure-auth:
+    build: ./modules/09-identification-auth-failures/secure
+    container_name: secure-auth
+    ports:
+      - "5012:5000"
+    restart: unless-stopped
+
 volumes:
   dvwa-db-data:
