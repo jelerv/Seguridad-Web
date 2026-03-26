@@ -1,0 +1,12 @@
+services:
+  vulnerable-supply-chain:
+    build: ./vulnerable
+    container_name: vulnerable-supply-chain
+    ports:
+      - "5007:5000"
+
+  secure-supply-chain:
+    build: ./secure
+    container_name: secure-supply-chain
+    ports:
+      - "5008:5000"
