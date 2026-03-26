@@ -1,0 +1,12 @@
+services:
+  vulnerable-misconfig:
+    build: ./vulnerable
+    container_name: vulnerable-misconfig
+    ports:
+      - "5005:5000"
+
+  secure-misconfig:
+    build: ./secure
+    container_name: secure-misconfig
+    ports:
+      - "5006:5000"
