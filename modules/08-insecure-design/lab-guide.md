@@ -1,39 +1,36 @@
 # Guía del Laboratorio – Insecure Design
 
-## 1. Ejercicio principal: Threat Modeling
+## 1. Ejercicio Principal: Threat Modeling
 
-### Caso práctico: Aplicación de E-commerce (API + Web)
+**Caso de estudio:** Plataforma de E-commerce (Web + API)
 
 **Descripción del sistema:**
-- Usuarios pueden registrarse, iniciar sesión y realizar compras.
-- Existe un panel de administración.
-- La API maneja pagos y gestión de productos.
-- Se usa JWT para autenticación.
+- Usuarios pueden registrarse, iniciar sesión y comprar productos.
+- API maneja órdenes, pagos y gestión de productos.
+- Existe un panel administrativo.
+- Se utiliza JWT para autenticación y un servicio externo de pagos.
 
-**Tarea (en grupos o individual):**
-Usa la metodología **STRIDE** para identificar amenazas de diseño.
+**Instrucciones:**
+1. Dibuja un **Data Flow Diagram (DFD)** simple del sistema.
+2. Identifica los principales elementos: Usuario, Frontend, API, Base de datos, Servicio de pagos.
+3. Aplica la metodología **STRIDE** a cada flujo y elemento:
+   - **S**poofing (suplantación)
+   - **T**ampering (manipulación)
+   - **R**epudiation (repudio)
+   - **I**nformation Disclosure (divulgación de información)
+   - **D**enial of Service (denegación de servicio)
+   - **E**levation of Privilege (elevación de privilegios)
 
-**Pasos recomendados:**
-1. Dibuja el diagrama de flujo de datos (Data Flow Diagram - DFD).
-2. Identifica los elementos: Usuarios, API, Base de datos, Servicio de pagos.
-3. Aplica STRIDE a cada elemento y flujo:
-   - **S**poofing
-   - **T**ampering
-   - **R**epudiation
-   - **I**nformation Disclosure
-   - **D**enial of Service
-   - **E**levation of Privilege
+4. Para cada amenaza identificada, propone controles de seguridad que deberían implementarse **en la fase de diseño**.
 
-4. Propón controles de seguridad para mitigar las amenazas identificadas.
-
-## 2. Análisis de la aplicación de ejemplo
-- Analiza la versión `vulnerable/` → identifica decisiones de diseño inseguras.
+## 2. Análisis de código de ejemplo
+- Revisa la aplicación en `vulnerable/` e identifica decisiones de diseño inseguras.
 - Compara con la versión `secure/`.
 
 ## 3. Tarea final
-- Redacta un documento corto de "Secure Design Requirements" para la aplicación de e-commerce.
-- Incluye al menos 5 controles de seguridad que deben estar presentes desde la fase de diseño.
+- Redacta un documento corto titulado **"Secure Design Requirements"** para la plataforma de e-commerce.
+- Incluye mínimo 8 controles de seguridad que deben estar presentes desde el diseño.
 
 **Herramientas recomendadas:**
-- draw.io / Lucidchart / Miro (para diagramas)
-- Plantilla STRIDE (incluida en exercises/)
+- draw.io, Lucidchart o Miro (para diagramas)
+- Plantilla STRIDE (disponible en exercises/)
