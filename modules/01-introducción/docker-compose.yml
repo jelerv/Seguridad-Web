@@ -44,6 +44,21 @@ services:
 
   # ====================== APPS DEL CURSO (por módulo) ======================
 
+  # Módulo 03 - Broken Access Control
+  vulnerable-broken-access:
+    build: ./modules/03-broken-access-control/vulnerable
+    container_name: vulnerable-broken-access
+    ports:
+      - "5003:5000"
+    restart: unless-stopped
+
+  secure-broken-access:
+    build: ./modules/03-broken-access-control/secure
+    container_name: secure-broken-access
+    ports:
+      - "5004:5000"
+    restart: unless-stopped
+
   # Módulo 07 - Injection
   vulnerable-injection:
     build: ./modules/07-injection/vulnerable
