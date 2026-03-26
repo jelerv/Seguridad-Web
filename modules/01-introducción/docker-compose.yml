@@ -1,0 +1,9 @@
+services:
+  juice-shop:
+    image: bkimminich/juice-shop
+    container_name: juice-shop
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+# Puedes agregar más servicios después (CrAPI, DVWA, etc.)
