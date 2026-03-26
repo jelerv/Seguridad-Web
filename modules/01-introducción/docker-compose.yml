@@ -88,6 +88,21 @@ services:
     ports:
       - "5008:5000"
     restart: unless-stopped
+
+ # Módulo 06 - Cryptografics Failures
+  vulnerable-crypto:
+    build: ./modules/06-cryptographic-failures/vulnerable
+    container_name: vulnerable-crypto
+    ports:
+      - "5009:5000"
+    restart: unless-stopped
+
+  secure-crypto:
+    build: ./modules/06-cryptographic-failures/secure
+    container_name: secure-crypto
+    ports:
+      - "5010:5000"
+    restart: unless-stopped
       
   # Módulo 07 - Injection
   vulnerable-injection:
