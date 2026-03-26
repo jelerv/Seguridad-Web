@@ -125,7 +125,22 @@ services:
   #   ports:
   #     - "5003:5000"
 
-  # Módulo 08 - Identification Auth Failures
+  # Módulo 08 - Insecure Design
+  vulnerable-insecure-design:
+    build: ./modules/08-insecure-design/vulnerable
+    container_name: vulnerable-insecure-design
+    ports:
+      - "5011:5000"
+    restart: unless-stopped
+
+  secure-insecure-design:
+    build: ./modules/08-insecure-design/secure
+    container_name: secure-insecure-design
+    ports:
+      - "5012:5000"
+    restart: unless-stopped
+ 
+  # Módulo 09 - Identification Auth Failures
   vulnerable-auth:
     build: ./modules/09-identification-auth-failures/vulnerable
     container_name: vulnerable-auth
