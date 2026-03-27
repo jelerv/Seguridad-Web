@@ -5,6 +5,10 @@ docker compose up -d
 docker logs -f juice-shop
 docker logs -f crapi
 
+# Ver procesos
+docker ps
+docker ps -a
+
 # Detener todo
 docker compose down
 
