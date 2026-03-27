@@ -1,0 +1,48 @@
+
+**docker-compose.yml** (Actualizado con CrAPI y DVWA)
+```yaml
+version: '3.8'
+
+services:
+  juice-shop:
+    image: bkimminich/juice-shop:latest
+    container_name: juice-shop
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+  crapi:
+    image: hapi/hapi-crapi:latest
+    container_name: crapi
+    ports:
+      - "8888:8888"
+    restart: unless-stopped
+
+  dvwa:
+    image: vulnerables/web-dvwa:latest
+    container_name: dvwa
+    ports:
+      - "8080:80"
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_USER=dvwa
+      - MYSQL_PASSWORD=dvwa
+      - MYSQL_DB=dvwa
+    depends_on:
+      - dvwa-db
+    restart: unless-stopped
+
+  dvwa-db:
+    image: mysql:8.0
+    container_name: dvwa-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=p@ssw0rd
+      - MYSQL_DATABASE=dvwa
+      - MYSQL_USER=dvwa
+      - MYSQL_PASSWORD=dvwa
+    volumes:
+      - dvwa-db-data:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  dvwa-db-data:
