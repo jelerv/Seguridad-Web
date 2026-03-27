@@ -13,6 +13,7 @@ Curso completo de 48-60 horas que cubre las 10 vulnerabilidades más críticas s
 - Entorno completo con Docker Compose (una sola orden para levantar todo)
 - Aplicaciones vulnerables y seguras para cada riesgo
 - Laboratorios guiados paso a paso
+- Script de ayuda `start-lab.sh` para facilitar el inicio de los laboratorios
 - Casos reales de brechas de seguridad
 - Enfoque práctico 50% teoría + 50% hands-on
 
