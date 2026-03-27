@@ -1,6 +1,3 @@
-
-**3. vulnerable/app.py** (Actualizado y más claro)
-```python
 from flask import Flask, request, jsonify
 import sqlite3
 
