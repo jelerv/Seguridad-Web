@@ -3,10 +3,10 @@ services:
     build: ./vulnerable
     container_name: vulnerable-api-advanced
     ports:
-      - "5013:5000"
+      - "5016:5000"
 
   secure-api-advanced:
     build: ./secure
     container_name: secure-api-advanced
     ports:
-      - "5014:5000"
+      - "5017:5000"
