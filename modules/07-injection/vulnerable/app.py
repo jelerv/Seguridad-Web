@@ -1,16 +1,15 @@
 
-**vulnerable/app.py** (Código inseguro – SQL Injection clásica)
+**3. vulnerable/app.py** (Actualizado y más claro)
 ```python
 from flask import Flask, request, jsonify
 import sqlite3
 
 app = Flask(__name__)
 
-# Base de datos SQLite en memoria para el lab
 def get_db_connection():
     conn = sqlite3.connect(':memory:')
     conn.executescript('''
-        CREATE TABLE users (
+        CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY,
             username TEXT,
             password TEXT,
@@ -18,7 +17,8 @@ def get_db_connection():
         );
         INSERT INTO users (username, password, email) VALUES 
             ('admin', 'admin123', 'admin@company.com'),
-            ('user', 'password', 'user@company.com');
+            ('user', 'password', 'user@company.com'),
+            ('guest', 'guest123', 'guest@company.com');
     ''')
     return conn
 
