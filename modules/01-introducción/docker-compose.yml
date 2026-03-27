@@ -45,14 +45,14 @@ services:
 
   # Módulo 07 - Injection
   vulnerable-injection:
-    build: ./modules/07-injection/vulnerable
+    build: ../07-injection/vulnerable
     container_name: vulnerable-injection
     ports:
       - "5001:5000"
     restart: unless-stopped
 
   secure-injection:
-    build: ./modules/07-injection/secure
+    build: ../07-injection/secure
     container_name: secure-injection
     ports:
       - "5002:5000"
