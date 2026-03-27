@@ -34,10 +34,12 @@ cd curso-seguridad-web-apis-owasp-top10-2025
 ### 2. Levantar el entorno
 
 Opción recomendada (todo el laboratorio):
+
 ```bash
 docker compose up -d
 
 Opción ligera (solo Juice Shop + apps del módulo actual):
+
 ```bash
 docker compose up -d juice-shop
 
