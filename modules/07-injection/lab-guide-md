@@ -1,6 +1,6 @@
-# Guía del Laboratorio – SQL Injection
+# Guía del Laboratorio – Injection (A05:2025)
 
-## 1. Preparación
+## 1. Levantar las aplicaciones
+Desde la raíz del repositorio:
 ```bash
-cd modules/07-injection
-docker compose up -d
+docker compose up -d vulnerable-injection secure-injection
