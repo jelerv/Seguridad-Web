@@ -9,7 +9,7 @@ services:
     restart: unless-stopped
 
   crapi:
-    image: hapi/hapi-crapi:latest
+    image: crapi/crapi-community:develop
     container_name: crapi
     ports:
       - "8888:8888"
