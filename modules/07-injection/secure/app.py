@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, abort
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import text
 
@@ -11,7 +11,7 @@ db = SQLAlchemy(app)
 # Crear base de datos y datos de prueba
 with app.app_context():
     db.engine.executescript('''
-        CREATE TABLE users (
+        CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY,
             username TEXT,
             password TEXT,
@@ -19,7 +19,8 @@ with app.app_context():
         );
         INSERT INTO users (username, password, email) VALUES 
             ('admin', 'admin123', 'admin@company.com'),
-            ('user', 'password', 'user@company.com');
+            ('user', 'password', 'user@company.com'),
+            ('guest', 'guest123', 'guest@company.com');
     ''')
 
 @app.route('/login', methods=['POST'])
@@ -41,8 +42,8 @@ def login():
 def search():
     q = request.args.get('q', '')
     
-    # ✅ SEGURO: Parámetros + LIKE seguro
-    if not q or len(q) > 50:  # Validación básica adicional
+    # ✅ SEGURO: Parámetros + validación básica
+    if not q or len(q) > 100:
         return jsonify([])
     
     query = text("SELECT id, username, email FROM users WHERE username LIKE :q OR email LIKE :q")
@@ -52,4 +53,4 @@ def search():
     return jsonify(users)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=False)  # debug=False en producción
+    app.run(host='0.0.0.0', port=5000, debug=False)
