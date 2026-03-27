@@ -30,3 +30,6 @@ Nota: Este comando pedirá confirmación..
 docker rm -f $(docker ps -aq)
 
 Advertencia: Esto borrará todos los contenedores del sistema
+
+#Limpiar todo el sistema: 
+docker system prune -a 
