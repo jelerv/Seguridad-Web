@@ -10,3 +10,19 @@ docker compose down
 
 # Reiniciar solo una app
 docker restart vulnerable-injection
+
+# Eliminar un contenedor detenido:
+docker rm <id_o_nombre_del_contenedor>
+
+# Forzar la eliminación de un contenedor en ejecución:
+docker rm -f <id_o_nombre_del_contenedor>
+
+# Eliminar todos los contenedores detenidos:
+docker container prune
+
+Nota: Este comando pedirá confirmación..
+
+# Eliminar todos los contenedores (activos y detenidos):
+docker rm -f $(docker ps -aq)
+
+Advertencia: Esto borrará todos los contenedores del sistema
