@@ -3,10 +3,10 @@ services:
     build: ./vulnerable
     container_name: vulnerable-insecure-design
     ports:
-      - "5011:5000"
+      - "5012:5000"
 
   secure-insecure-design:
     build: ./secure
     container_name: secure-insecure-design
     ports:
-      - "5012:5000"
+      - "5013:5000"
