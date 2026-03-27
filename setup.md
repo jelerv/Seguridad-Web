@@ -31,7 +31,7 @@ Este documento te guiará paso a paso para configurar todo el entorno necesario 
 git clone https://github.com/TU-USUARIO/curso-seguridad-web-apis-owasp-top10-2025.git
 cd curso-seguridad-web-apis-owasp-top10-2025
 
-#### 2. Levantar el entorno
+### 2. Levantar el entorno
 
 Opción recomendada (todo el laboratorio):
 
